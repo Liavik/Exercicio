@@ -5,67 +5,38 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-header, footer {
-    background-color: #192a56;
-    padding-top: 16px;
-    color: #fff;
-}
-
-header > .container,
-footer > .container {
-    justify-content: space-between;
+header > .cabecalho {
+    background-color: #3868D6;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    padding-bottom: 16px;
 }
 
-header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
+header h1 {
+    color: #fff;
+    font-style: italic;
 }
 
 nav {
-    background-color: #575fcf;
     padding: 16px 0;
-    display: none;
+    display: block;
 }
 
-nav li{
+nav a{
     list-style: none;
     display: inline;
     margin-right: 16px;
     font-size: 18px;
     font-weight: bold;
-    text-transform: uppercase;
-}
-
-nav li a{
     color: #fff;
     text-decoration: none;
 }
 
-.menu-hamburguer {
-    width: 32px;
-    cursor: pointer;
-}
-
-.menu-hamburguer span {
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 4px;
+main {
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .container-flex {
@@ -73,7 +44,7 @@ nav li a{
 }
 
 #sobre-a-loja img{
-    max-width: 400px;
+    max-width: 450px;
     margin-right: 24px;
 }
 
@@ -82,29 +53,29 @@ section {
 }
 
 section h2 {
+    color: #3868D6;
+    border-bottom: 2px solid #3868D6;
     margin-bottom: 16px;
+    padding-bottom: 15px;
 }
 
-.lista-veiculos {
-    flex-wrap: wrap;
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(4, 24.2%);
+    column-gap: 1%;
+    row-gap: 5%;
 }
 
-.lista-veiculos li {
-    list-style: none;
-    max-width: 30%;
-    margin-bottom: 24px;
-}
-
-.lista-veiculos li img {
+.lista-produtos article img {
     max-width: 100%;
 }
 
-.lista-veiculos li h3 {
-    margin: 16px 0;
+.lista-produtos article h3 {
+    margin-top: 50px;
 }
 
-.item-central {
-    margin: 0 5%;
+.lista-produtos article p {
+    margin: 15px 0;
 }
 
 button {
@@ -112,7 +83,7 @@ button {
     width: 100%;
     padding: 8px 0;
     border: none;
-    background-color: #119759;
+    background-color: #3868D6;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -121,50 +92,65 @@ button {
     border-radius: 6px;
 }
 
-.price {
-    margin: 16px 0;
-    display: block;
+@media screen and (min-width: 641px) and (max-width: 1037px) {
+    main {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre-a-loja img{
+        max-width: 75%;
+    }    
+
+    #sobre-a-loja h2 {
+        margin: 40px 0 20px;
+    }
+
+    .conteudo {
+        grid-template-columns: repeat(2, 49.5%);
+    }
+
+    .lista-produtos article img {
+        max-width: 100%;
+    }
 }
 
-.price del {
-    color: #ccc;
-    font-size: 14px;
-}
+@media screen and (max-width: 640px) {
+    nav >.container {
+        display: flex;
+        flex-direction: column;
+    }
 
-.form-campo {
-    margin-bottom: 16px;
-}
+    main {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 
-.form-campo label {
-    font-weight: bold;
-    display: block;
-}
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.form-campo input,
-.form-campo textarea {
-    width: 100%;
-    display: block;
-    padding: 8px;
-}
+    #sobre-a-loja img{
+        max-width: 90%;
+    }    
 
-.form-campo textarea {
-    resize: none;
-    height: 120px;
-}
+    #sobre-a-loja h2 {
+        margin: 40px 0 20px;
+    }
 
-form {
-    max-width: 360px;
-}
+    .conteudo {
+        grid-template-columns: repeat(1, 100%);
+    }
 
-form button {
-    max-width: 120px;
-}
-
-footer li {
-    list-style: none;
-    margin-left: 16px;
-}
-
-footer li img {
-    height: 32px;
+    .lista-produtos article img {
+        max-width: 100%;
+    }
 }
