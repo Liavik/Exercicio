@@ -76,7 +76,9 @@ section h2 {
 
 .lista-produtos article p {
     margin: 15px 0;
+    height: 57px;
 }
+
 
 button {
     display: block;
@@ -92,7 +94,7 @@ button {
     border-radius: 6px;
 }
 
-@media screen and (min-width: 641px) and (max-width: 1037px) {
+@media screen and (min-width: 641px) and (max-width: 1024px) {
     main {
         max-width: 90%;
         margin: 0 auto;
@@ -118,6 +120,14 @@ button {
 
     .lista-produtos article img {
         max-width: 100%;
+    }
+
+    .lista-produtos article h3 {
+        height: 46px;
+    }
+
+    .lista-produtos article p {
+        height: 38px;
     }
 }
 
